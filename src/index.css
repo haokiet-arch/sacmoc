@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-50 text-stone-800 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply mx-auto max-w-8xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-none bg-wood-800 px-8 py-3 text-sm font-medium uppercase tracking-wider text-wood-50 transition-all duration-300 hover:bg-wood-900 disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-none border border-wood-300 bg-transparent px-8 py-3 text-sm font-medium uppercase tracking-wider text-wood-800 transition-all duration-300 hover:bg-wood-100 disabled:opacity-50;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-none bg-accent-500 px-8 py-3 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:bg-accent-600 disabled:opacity-50;
+  }
+
+  .input-field {
+    @apply w-full rounded-none border border-stone-300 bg-white px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-wood-500 focus:outline-none focus:ring-1 focus:ring-wood-500;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-2xl;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .heading-eyebrow {
+    @apply text-xs font-sans font-medium uppercase tracking-[0.25em] text-accent-600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
